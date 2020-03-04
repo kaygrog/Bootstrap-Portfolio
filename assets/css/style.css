@@ -25,7 +25,7 @@ nav {
 }
 
 .nav-links {
-    padding: 5px;
+    padding: 10px;
     font-size: 18px;
     display: table-cell;
     vertical-align: middle;
@@ -45,4 +45,22 @@ h1 {
     font-size: 2em;
     background-color: #4aaaa5;
     width: 320px;
+}
+
+/* Media Queries
+When xs screen (640px), change h1 width to auto and remove left and right margins from .nav-container */
+
+/* These rules take effect when the browser's width is either 640px or less. */
+@media screen and (max-width: 640px) {
+    h1 {
+        width: auto;
+    }
+
+    .nav-container {
+        margin: 0;
+    }
+
+    .nav-links {
+        text-align: center;
+    }
 }
