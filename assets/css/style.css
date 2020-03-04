@@ -1,3 +1,7 @@
+html, body {
+    height: 100%;
+}
+
 body {
     background-image: url("../images/noisy_grid.png");
     background-color: #cccccc;
@@ -8,35 +12,40 @@ body {
     flex-direction: column;
 }
 
+.content {
+    flex: 1 0 auto;
+}
+
 nav {
     background-color: #ffffff;
     border-bottom-style: solid;
     border-bottom-color: #cccccc;
     border-bottom-width: 2px;
-    display: table;
 }
 
 .nav-container {
+    width: auto;
     margin: 0 50px;
 }
 
 .nav-links-container {
-    display: table;
-    margin: auto;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 .nav-links {
     padding: 10px;
     font-size: 18px;
-    display: table-cell;
-    vertical-align: middle;
     text-align: right;
+    white-space: nowrap;
+    margin: 0;
 }
 
 a {
     color: #777777;
     text-decoration: none;
-    /* padding: 0 10px; */
 }
 
 h1, h2 {
@@ -52,6 +61,7 @@ h1 {
     font-size: 2em;
     background-color: #4aaaa5;
     width: 320px;
+    white-space: nowrap;
 }
 
 h2 {
@@ -68,6 +78,7 @@ hr {
 
 .main-container {
     margin: 35px 50px;
+    width: auto;
 }
 
 .main-content-container {
@@ -76,6 +87,27 @@ hr {
     border-bottom-style: solid;
     border-bottom-color: #cccccc;
     border-bottom-width: 1px;
+}
+
+.footer {
+    flex-shrink: 0;
+    background-color: #666666;
+    border-top-style: solid;
+    border-top-color: #4aaaa5;
+    border-top-width: 7px;
+}
+
+.footer-container {
+    width: auto;
+    margin: 0 50px;
+}
+
+.footer-content-container {
+    margin: 0;
+    text-align: center;
+    font-size: 12px;
+    color: #c5c7be;
+    padding: 35px 0px 5px 0px;
 }
 
 /* About Page */
@@ -90,6 +122,66 @@ hr {
     line-height: 30px;
 }
 
+/* Portfolio Page */
+
+.portfolio-image-container {
+    position: relative;
+    width: 220px;
+    height: 165px;
+    margin: 40px 0;
+}
+
+.portfolio-image-container .portfolio-image-caption {
+    position: absolute;
+    width: 220px;
+    height: 50px;
+    bottom: 10px;
+    left: 0px;
+    background: #4aaaa5;
+}
+
+.portfolio-image-caption {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+/* Contact Page */
+
+label {
+    display: block;
+    margin: 20px 0px 5px 0px;
+}
+
+input[type=text], #message {
+    width: 100%;
+    padding: 8px;
+    color: #777777;
+    font-size: 14px;
+    border-style: solid;
+    border-color: #cccccc;
+    border-width: 1px;
+}
+
+input[type=submit] {
+    font-size: 15px;
+    margin-top: 20px;
+    background-color: #4aaaa5;
+    border: none;
+    color: #ffffff;
+    padding: 9px 25px;
+    display: block;
+}
+
+#message {
+    height: 200px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 /* These rules take effect when the browser's width is either 640px or less. */
 @media screen and (max-width: 640px) {
     h1 {
@@ -97,10 +189,14 @@ hr {
     }
 
     .nav-container {
-        margin: 0;
+        margin: 0 15px 0 0;
     }
 
-    .nav-links {
-        text-align: center;
+    .nav-links-container {
+        justify-content: center;
+    }
+
+    .portfolio-image-container {
+        margin: 10px 0;
     }
 }
