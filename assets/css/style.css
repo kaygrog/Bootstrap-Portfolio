@@ -13,6 +13,7 @@ nav {
     border-bottom-style: solid;
     border-bottom-color: #cccccc;
     border-bottom-width: 2px;
+    display: table;
 }
 
 .nav-container {
@@ -32,14 +33,20 @@ nav {
     text-align: right;
 }
 
-h1, h2, h3 {
+a {
+    color: #777777;
+    text-decoration: none;
+    /* padding: 0 10px; */
+}
+
+h1, h2 {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 h1 {
     text-align: center;
     color: #ffffff;
-    margin: 0 0 0 ;
+    margin: 0;
     padding: 30px 0px;
     font-weight: bold;
     font-size: 2em;
@@ -47,8 +54,41 @@ h1 {
     width: 320px;
 }
 
-/* Media Queries
-When xs screen (640px), change h1 width to auto and remove left and right margins from .nav-container */
+h2 {
+    color: #4aaaa5;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px 0 0 0;
+}
+
+hr {
+    border-top: 2px solid #cccccc;
+    margin-bottom: 25px;
+}
+
+.main-container {
+    margin: 35px 50px;
+}
+
+.main-content-container {
+    background-color: #ffffff;
+    padding: 15px 35px;
+    border-bottom-style: solid;
+    border-bottom-color: #cccccc;
+    border-bottom-width: 1px;
+}
+
+/* About Page */
+
+#my-image {
+    float: left;
+    width: 400px;
+    margin: 0px 25px 15px 0px;
+}
+
+.bio {
+    line-height: 30px;
+}
 
 /* These rules take effect when the browser's width is either 640px or less. */
 @media screen and (max-width: 640px) {
